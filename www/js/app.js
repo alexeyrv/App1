@@ -26,7 +26,7 @@ var myapp = angular.module('starter', ['ionic'])
 myapp.controller( 'sctrl', ['$scope', '$interval', 
 	function($scope, $interval) {
 	
-		$scope.nSpeed = 1000; // должно быть 1000 милисекунд
+		$scope.nSpeed = 150; // должно быть 1000 милисекунд
 		
 		$scope.nStage = 1;
 		$scope.aStagesize = [ 1, 2, 4, 2 ];
