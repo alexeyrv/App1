@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+      <ion-header-bar class="bar-balanced">
+        <h1 class="title">Ionic Breath Helper</h1>
+
+
+      </ion-header-bar>
+      <ion-content>
+	  <div ng-controller='sctrl' style="margin:20px;">
+		<div class="card" >
+		<div class="item item-divider" class="icon ion-star">
+			<div class="row">
+				<div class="col">
+				Длина: <input ng-model='nBase' size='2'>
+				<button ng-click="nBase=nBase-1">-</button>
+				<button ng-click="nBase=nBase+1">+</button>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+				Циклов: <input ng-model='nRounds' size='2'> 
+				<button ng-click="nRounds=nRounds-1">-</button>
+				<button ng-click="nRounds=nRounds+1">+</button>
+				</div>
+			</div>
+			<!-- disabled checkboxes in case of app logic features coming -->
+			Пауза А <input ng-disabled="false" type="checkbox" ng-model='bBPauseA'>
+			Пауза Б <input ng-disabled="false" type="checkbox" ng-model='bBPauseB'>
+		</div>
+		<div class="item item-text-wrap">
+			<div class="row">
+				<div class="col col-40">
+					Вдох: {{nBase * 1}}
+				</div>
+			</div>
+			<div ng-show="bBPauseA" class="row" >
+				<div class="col col-40">
+					Пауза А: {{nBase * 2}}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-40">
+					Выдох: {{nBase * 4}}
+				</div>
+			</div>
+			<div ng-show="bBPauseB" class="row">
+				<div class="col col-40">
+					Пауза Б: {{nBase * 2}}
+				</div>
+			</div>
+			<!--
+			<div class="row">
+				<div class="col">
+					Прошло: {{nTotal}} из {{nAllTime}}
+				</div>
+			</div>
+			-->
+		
+			<h1> {{aStageName[nStage-1]}} <br> {{nCount}} из {{ nBase * aStagesize[nStage-1] }}</h1>
+			<h1> Цикл {{nCurRound}} из {{nRounds}}</h1>
+		</div>
+
+		<div class="item item-divider">
+			<button ng-click="TimerStart()">Начать</button>
+			<button ng-click="TimerStop()">Закончить</button>
+		</div>
+	
+	  </ion-content>
+    </ion-pane>
+  </body>
+</html>
