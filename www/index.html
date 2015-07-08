@@ -36,21 +36,33 @@
 			<div class="row">
 				<div class="col">
 				Длина: <input ng-model='nBase' size='2'>
-				<button ng-click="nBase=nBase-1">-</button>
-				<button ng-click="nBase=nBase+1">+</button>
+				<button ng-click="nBase=nBase-1" class="button button-small button-assertive button-outline">
+				<b>-</b></button>
+				<button ng-click="nBase=nBase+1" class="button button-small button-positive button-outline">
+				<b>+</b></button>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col">
 				Циклов: <input ng-model='nRounds' size='2'> 
-				<button ng-click="nRounds=nRounds-1">-</button>
-				<button ng-click="nRounds=nRounds+1">+</button>
+				<button ng-click="nRounds=nRounds-1" class="button button-small button-assertive button-outline">
+				<b>-</b></button>
+				<button ng-click="nRounds=nRounds+1" class="button button-small button-positive button-outline">
+				<b>+</b></button>
 				</div>
 			</div>
 			<!-- disabled checkboxes in case of app logic features coming -->
-			Пауза А <input ng-disabled="false" type="checkbox" ng-model='bBPauseA'>
-			Пауза Б <input ng-disabled="false" type="checkbox" ng-model='bBPauseB'>
+			<div class="col-45 item item-checkbox">
+				<label class="checkbox">
+					<input ng-disabled="false" type="checkbox" ng-model='bBPauseA'>
+				</label> Пауза А
+			</div>
+			<div class="col-45 item item-checkbox">
+				<label class="checkbox">
+					<input ng-disabled="false" type="checkbox" ng-model='bBPauseB'>
+				</label> Пауза Б 
+			</div>
 		</div>
 		<div class="item item-text-wrap">
 			<div class="row">
@@ -86,8 +98,8 @@
 		</div>
 
 		<div class="item item-divider">
-			<button ng-click="TimerStart()">Начать</button>
-			<button ng-click="TimerStop()">Закончить</button>
+			<button ng-click="TimerStart()"  class="button button-balanced">Начать</button>
+			<button ng-click="TimerStop()"  class="button button-calm">Закончить</button>
 		</div>
 	
 	  </ion-content>
