@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.app1661086" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>app1</name>
+<widget id="com.ionicframework.app1661086" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Pranayama Assistance</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Pranayama Assistance. An Ionic Framework and Cordova project.
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="a.ryzhkov@gmail.com" href="http://alexeyr.ru/">
+      AlexeyR Alexey Ryzhkov 2015
     </author>
   <content src="index.html"/>
   <access origin="*"/>
