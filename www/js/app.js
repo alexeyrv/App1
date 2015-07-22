@@ -26,14 +26,18 @@ var myapp = angular.module('starter', ['ionic'])
 myapp.controller( 'sctrl', ['$scope', '$interval', 
 	function($scope, $interval) {
 	
+	
+	
+	/* Logic to breathing exercise */
 		$scope.nSpeed = 1000; // должно быть 1000 милисекунд
 		
 		$scope.nStage = 1;
 		$scope.aStagesize = [ 1, 2, 4, 2 ];
 		$scope.aStageName = [ 'Вдох', 'Пауза А', 'Выдох', 'Пауза Б' ];
 		$scope.nBase = 1;
-/*		$scope.nRounds = 2;
-		$scope.nCurRound = 1; // current round start value
+
+		$scope.nRounds = 2;
+/*		$scope.nCurRound = 1; // current round start value
 		$scope.nAllTime = 0;
 		$scope.message = 'Готов?';
 
@@ -44,7 +48,7 @@ myapp.controller( 'sctrl', ['$scope', '$interval',
 		$scope.BaseEstimate = function() 
 		{
 			$scope.nStage = 1;
-			$scope.nRounds = 2;
+			//$scope.nRounds = 2;
 			$scope.nCurRound = 1; // current round start value
 			$scope.nAllTime = 0;
 			$scope.message = 'Готов?';

@@ -15,6 +15,9 @@
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+	<!-- PouchdB js -->
+	<script src="http:\\cdn.jsdelivr.net/pouchdb/3.6.0/pouchdb.min.js"></script>
+	
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
@@ -35,29 +38,34 @@
 		<div class="item item-divider" class="icon ion-star">
 			<div class="row">
 				<div class="col">
-				Длина: <input ng-model='nBase' size='2'>
-				<button ng-click="nBase=nBase-1" class="button button-small button-assertive button-outline">
-				<b>-</b></button>
-				<button ng-click="nBase=nBase+1" class="button button-small button-positive button-outline">
-				<b>+</b></button>
+					Длина: <input ng-model='nBase' size='2'> &nbsp;
+				</div>
+				<div class="col" align="right">
+					<button ng-click="nBase=nBase-1" class="button button-small button-assertive button-outline">
+					<b>-</b></button>
+					<button ng-click="nBase=nBase+1" class="button button-small button-positive button-outline">
+					<b>+</b></button>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col">
-				Циклов: <input ng-model='nRounds' size='2'> 
-				<button ng-click="nRounds=nRounds-1" class="button button-small button-assertive button-outline">
-				<b>-</b></button>
-				<button ng-click="nRounds=nRounds+1" class="button button-small button-positive button-outline">
-				<b>+</b></button>
+					Циклов: <input ng-model='nRounds' size='2'> 
+				</div>
+				<div class="col" align="right">
+					<button ng-click="nRounds=nRounds-1" class="button button-small button-assertive button-outline">
+					<b>-</b></button>
+					<button ng-click="nRounds=nRounds+1" class="button button-small button-positive button-outline">
+					<b>+</b></button>
 				</div>
 			</div>
 			<!-- disabled checkboxes in case of app logic features coming -->
-			<div class="col-45 item item-checkbox">
+			<div class="item item-checkbox">
 				<label class="checkbox">
 					<input ng-disabled="false" type="checkbox" ng-model='bBPauseA'>
 				</label> Пауза А
 			</div>
+
 			<div class="col-45 item item-checkbox">
 				<label class="checkbox">
 					<input ng-disabled="false" type="checkbox" ng-model='bBPauseB'>
